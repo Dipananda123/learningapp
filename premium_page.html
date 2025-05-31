@@ -1,48 +1,409 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-    <title>Learning Apps</title>
-     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-       <header>
-        <div class="navigation">
-            <div class="home"><a href="index.html"><img class="nav-icon" src="images/home-icon.png" alt="">&nbsp; <div class="phone-hide">HOME</div> </a></div>
-            <div class="premium"><a href="premium_page.html"><img class="nav-icon" src="images/premium-icon.png" alt="">&nbsp; <div class="phone-hide">PREMIUM</div></a></div>
-            <div class="support"><a href="support_pahe.html"><img class="nav-icon"  src="images/support-icon.png" alt="">&nbsp; <div class="phone-hide">SUPPORT</div></a></div>
-            <div class="account"><a href="account_page.html"><img class="nav-icon"  src="images/account-icon.png" alt="">&nbsp; <div class="phone-hide">ACCOUNT</div></a></div>
-        </div>
-      </header>
-       <div class="desktop-hide">PREMIUMN</div>
-      <section class="premium_content">
-       
-        <div class="free_content">
-          <center><div class="header1">FREE</div></center> <br>
-          <div class="sfc"><img class="tickmark-icon" src="images/tickmark-icon.png" alt="">Basic Features</div>
-          <div class="sfc"><img class="tickmark-icon" src="images/tickmark-icon.png" alt="">Limited Quiz</div>
-          <div class="sfc"><img class="tickmark-icon" src="images/tickmark-icon.png" alt="">Limited Videos</div>
-          <div class="sfc"><img class="tickmark-icon" src="images/tickmark-icon.png" alt="">Ads</div>
-          <div class="sfc"><img class="tickmark-icon" src="images/tickmark-icon.png" alt="">No Support</div>
-          <div class="button_sfc">FREE</div>
-        </div>
-        <div class="free_content">
-          <center><div class="header1">PRO</div></center> <br>
-          <div class="sfc"><img class="tickmark-icon" src="images/tickmark-icon.png" alt="">Pro Features</div>
-          <div class="sfc"><img class="tickmark-icon" src="images/tickmark-icon.png" alt="">Unlimited Quiz</div>
-          <div class="sfc"><img class="tickmark-icon" src="images/tickmark-icon.png" alt="">Unlimited Videos</div>
-          <div class="sfc"><img class="tickmark-icon" src="images/tickmark-icon.png" alt="">No Ads</div>
-          <div class="sfc"><img class="tickmark-icon" src="images/tickmark-icon.png" alt="">24/7 Support</div>
-          <div class="button_sfc">Rs.99/MONTH</div>
-        </div>
-        <div class="enterprises_content">
-          <center><div class="header1">ENTERPRISES</div><br><br></center> <br>
-          <div class="sfc">Recommeded for</div>
-          <div class="sfc">School or Institue <br>(One Account for Many User)</div>
-          <br>
-          <div class="button_sfc">CONTACT US</div>
-        </div>
-      </section>
-</body>
-</html>
+
+
+@media only screen and (min-width : 480px) {
+        .navigation{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.desktop-hide{
+    display: none;
+}
+
+.navigation>div{
+   background-image: linear-gradient(rgba(19, 15, 15, 0.998),rgb(36, 35, 35));
+   color: aliceblue;
+   font-size: 25px;
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-basis: 190px;
+   transition-property: transform ;
+   transition-duration: 0.2s;
+   transition-timing-function: linear;
+}
+
+.navigation>div:hover{
+    transform: scale(1.1,1.1);
+}
+
+.nav-icon{
+    width: 50px;
+    height: auto;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    gap:20px ;
+    margin-top: 55px;
+}
+
+.content>div{
+background-image: linear-gradient(rgba(19, 15, 15, 0.998),rgb(36, 35, 35));
+   color: aliceblue;
+   font-size: 25px;
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-basis: 170px;
+   height: 200px;
+   text-align: center;
+   position: relative;
+   transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+
+.c-icon{
+    width:140px;
+    position: absolute;
+    top: -55px;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+
+.c-icon:hover{
+    transform: rotate(25deg);
+}
+
+.content>div:hover{
+      transform: scale(1.1,1.1);
+}
+
+a{
+   all: unset;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.premium_content{
+    display: flex;
+    justify-content: center;
+    gap:20px ;
+    margin-top: 55px;
+}
+
+.premium_content>div{
+background-image: linear-gradient(rgba(19, 15, 15, 0.998),rgb(36, 35, 35));
+   color: aliceblue;
+   font-size: 20px;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   flex-basis: 200px;
+   height: 270px;
+   text-align: center;
+}
+
+.tickmark-icon{
+    width: 25px;
+    height: auto;
+}
+
+.button_sfc{
+  background-image: linear-gradient(rgba(245, 238, 238, 0.998),rgb(243, 239, 239));
+   color: rgb(0, 0, 0);
+   font-size: 25px;
+   border-radius: 10px;  
+   padding: 5px 10px 5px 10px;
+   margin-top: 10px;
+}
+
+.support_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.tas{
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    resize: none;
+}
+
+.button_support{
+    background-image: linear-gradient(rgba(19, 15, 15, 0.998),rgb(36, 35, 35));
+   color: aliceblue;
+   font-size: 25px;
+   border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+   margin-top: 10px;
+}
+
+
+.account_container{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.girl-avator{
+    width: 400px;
+}
+
+.boy-avator{
+    width: 400px;
+}
+
+.google-icon{
+    width: 100px;
+    vertical-align: middle;
+}
+
+
+.facebook-icon{
+    width: 100px;
+}
+
+.sac3{
+    background-image: linear-gradient(rgba(19, 15, 15, 0.998),rgb(36, 35, 35));
+   color: aliceblue;
+   font-size: 25px;
+   border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+   margin-top: 10px;
+}
+
+.sac2{
+    margin-top:70px;
+}
+}
+
+
+ @media only screen and (max-width : 480px) {
+
+
+/*home page*/
+
+    .navigation{
+  position: fixed;
+  bottom: 0;
+  height: 65px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+
+
+
+
+.navigation>div{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+   
+ }
+
+
+.phone-hide{
+    display: none;
+}
+
+
+.desktop-hide{
+   color: transparent;
+   font-size: 35px;
+ 
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   text-align: center;
+   margin-top: 35px;
+   background: linear-gradient(305deg,rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+   background-clip: text;
+}
+
+a{
+   all: unset;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   -webkit-tap-highlight-color: transparent;
+}
+
+
+.nav-icon:hover{
+    transform: scale(1.3,1.3);
+     
+}
+
+.nav-icon{
+    width: 65px;
+    height: auto;
+    transition-property: transform;
+    transition-timing-function: linear;
+    
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    gap:50px ;
+    margin-top: 100px;
+   flex-wrap: wrap;
+  
+}
+
+
+.content>div{
+background-image: linear-gradient(rgba(19, 15, 15, 0.998),rgb(36, 35, 35));
+   color: aliceblue;
+   font-size: 20px;
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-basis: 130px;
+   height: 150px;
+   text-align: center;
+   position: relative;
+   transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    margin-bottom: 50px;
+    
+}
+
+.c-icon{
+    width:120px;
+    position: absolute;
+    top: -55px;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+
+.c-icon:hover{
+    transform: rotate(25deg);
+}
+
+.content>div:hover{
+      transform: scale(1.1,1.1);
+}
+
+/* end of home page */
+
+/*premium page */
+   
+   
+.premium_content{
+    display: flex;
+    gap:20px ;
+    margin-top: 85px;
+    overflow-x: scroll;
+   
+}
+
+.premium_content>div{
+background-image: linear-gradient(rgba(19, 15, 15, 0.998),rgb(36, 35, 35));
+   color: aliceblue;
+   font-size: 25px;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: left;
+   min-width: 250px;
+   height: 350px;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+.tickmark-icon{
+    width: 25px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.button_sfc{
+  background-image: linear-gradient(rgba(245, 238, 238, 0.998),rgb(243, 239, 239));
+   color: rgb(0, 0, 0);
+   font-size: 25px;
+   border-radius: 10px;  
+   padding: 5px 10px 5px 10px;
+   padding: 10px;
+   margin-top: 10px;
+}
+
+.support_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 120px;
+}
+
+.tas{
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    resize: none;
+}
+
+.button_support{
+    background-image: linear-gradient(rgba(19, 15, 15, 0.998),rgb(36, 35, 35));
+   color: aliceblue;
+   font-size: 25px;
+   border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+   margin-top: 10px;
+}
+
+
+
+
+
+.girl-avator{
+  width: 220px;
+    position: absolute;
+    bottom: 150px;
+}
+
+.boy-avator{
+    width: 200px;
+    position: absolute;
+    bottom: 150px;right: 15px;
+}
+
+.google-icon{
+    width: 100px;
+    vertical-align: middle;
+}
+
+
+.facebook-icon{
+    width: 100px;
+}
+
+.sac3{
+    background-image: linear-gradient(rgba(19, 15, 15, 0.998),rgb(36, 35, 35));
+   color: aliceblue;
+   font-size: 25px;
+   border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+   margin-top: 30px;
+  text-align: center;
+  
+}
+
+.sac2{
+    margin-top:70px;
+}
+    }
